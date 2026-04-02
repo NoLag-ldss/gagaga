@@ -26,8 +26,8 @@ local mainFrame = Instance.new("Frame")
 mainFrame.Name = "MainFrame"
 mainFrame.Size = UDim2.new(0, 0, 0, 0)
 mainFrame.Position = basePos
-mainFrame.BackgroundColor3 = Color3.fromRGB(8, 18, 12)
-mainFrame.BackgroundTransparency = 0.1
+mainFrame.BackgroundColor3 = Color3.fromRGB(22, 28, 45)
+mainFrame.BackgroundTransparency = 0.05
 mainFrame.BorderSizePixel = 0
 mainFrame.ClipsDescendants = true
 mainFrame.Parent = screenGui
@@ -37,16 +37,16 @@ mainCorner.CornerRadius = UDim.new(0, 18)
 mainCorner.Parent = mainFrame
 
 local mainStroke = Instance.new("UIStroke")
-mainStroke.Color = Color3.fromRGB(60, 200, 140)
+mainStroke.Color = Color3.fromRGB(74, 111, 165)
 mainStroke.Transparency = 0.3
 mainStroke.Thickness = 1.5
 mainStroke.Parent = mainFrame
 
 local bgGradient = Instance.new("UIGradient")
 bgGradient.Color = ColorSequence.new({
-	ColorSequenceKeypoint.new(0, Color3.fromRGB(10, 30, 20)),
-	ColorSequenceKeypoint.new(0.5, Color3.fromRGB(8, 20, 14)),
-	ColorSequenceKeypoint.new(1, Color3.fromRGB(15, 40, 28))
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(26, 34, 54)),
+	ColorSequenceKeypoint.new(0.5, Color3.fromRGB(20, 26, 42)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(30, 40, 62))
 })
 bgGradient.Rotation = 135
 bgGradient.Parent = mainFrame
@@ -54,16 +54,16 @@ bgGradient.Parent = mainFrame
 local glowFrame = Instance.new("Frame")
 glowFrame.Size = UDim2.new(1, 0, 0, 3)
 glowFrame.Position = UDim2.new(0, 0, 0, 0)
-glowFrame.BackgroundColor3 = Color3.fromRGB(60, 200, 140)
+glowFrame.BackgroundColor3 = Color3.fromRGB(90, 140, 210)
 glowFrame.BorderSizePixel = 0
 glowFrame.ZIndex = 5
 glowFrame.Parent = mainFrame
 
 local glowGrad = Instance.new("UIGradient")
 glowGrad.Color = ColorSequence.new({
-	ColorSequenceKeypoint.new(0, Color3.fromRGB(30, 140, 90)),
-	ColorSequenceKeypoint.new(0.5, Color3.fromRGB(80, 220, 160)),
-	ColorSequenceKeypoint.new(1, Color3.fromRGB(30, 140, 90))
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(42, 74, 127)),
+	ColorSequenceKeypoint.new(0.5, Color3.fromRGB(107, 159, 212)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(42, 74, 127))
 })
 glowGrad.Parent = glowFrame
 
@@ -78,7 +78,7 @@ topBar.Parent = mainFrame
 local logoContainer = Instance.new("Frame")
 logoContainer.Size = UDim2.new(0, 36, 0, 36)
 logoContainer.Position = UDim2.new(0, 14, 0.5, -18)
-logoContainer.BackgroundColor3 = Color3.fromRGB(30, 130, 80)
+logoContainer.BackgroundColor3 = Color3.fromRGB(42, 74, 127)
 logoContainer.BorderSizePixel = 0
 logoContainer.ZIndex = 4
 logoContainer.Parent = topBar
@@ -89,8 +89,8 @@ logoCorner.Parent = logoContainer
 
 local logoGrad = Instance.new("UIGradient")
 logoGrad.Color = ColorSequence.new({
-	ColorSequenceKeypoint.new(0, Color3.fromRGB(70, 200, 140)),
-	ColorSequenceKeypoint.new(1, Color3.fromRGB(20, 100, 60))
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(90, 140, 210)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(32, 58, 100))
 })
 logoGrad.Rotation = 135
 logoGrad.Parent = logoContainer
@@ -99,7 +99,7 @@ local logoLabel = Instance.new("TextLabel")
 logoLabel.Size = UDim2.new(1, 0, 1, 0)
 logoLabel.BackgroundTransparency = 1
 logoLabel.Text = "N"
-logoLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+logoLabel.TextColor3 = Color3.fromRGB(200, 220, 245)
 logoLabel.TextScaled = true
 logoLabel.Font = Enum.Font.GothamBold
 logoLabel.ZIndex = 5
@@ -110,7 +110,7 @@ titleLabel.Size = UDim2.new(0, 120, 0, 22)
 titleLabel.Position = UDim2.new(0, 58, 0, 8)
 titleLabel.BackgroundTransparency = 1
 titleLabel.Text = "IOA.FAN"
-titleLabel.TextColor3 = Color3.fromRGB(140, 230, 190)
+titleLabel.TextColor3 = Color3.fromRGB(184, 208, 235)
 titleLabel.TextScaled = false
 titleLabel.TextSize = isMobile and 14 or 15
 titleLabel.Font = Enum.Font.GothamBold
@@ -120,8 +120,8 @@ titleLabel.Parent = topBar
 
 local titleGrad = Instance.new("UIGradient")
 titleGrad.Color = ColorSequence.new({
-	ColorSequenceKeypoint.new(0, Color3.fromRGB(200, 255, 230)),
-	ColorSequenceKeypoint.new(1, Color3.fromRGB(60, 180, 120))
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(210, 228, 250)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(120, 160, 210))
 })
 titleGrad.Parent = titleLabel
 
@@ -130,7 +130,7 @@ subtitleLabel.Size = UDim2.new(0, 170, 0, 16)
 subtitleLabel.Position = UDim2.new(0, 58, 0, 30)
 subtitleLabel.BackgroundTransparency = 1
 subtitleLabel.Text = "Trade Controller"
-subtitleLabel.TextColor3 = Color3.fromRGB(90, 160, 120)
+subtitleLabel.TextColor3 = Color3.fromRGB(90, 120, 160)
 subtitleLabel.TextScaled = false
 subtitleLabel.TextSize = isMobile and 10 or 11
 subtitleLabel.Font = Enum.Font.Gotham
@@ -141,9 +141,9 @@ subtitleLabel.Parent = topBar
 local minimizeBtn = Instance.new("TextButton")
 minimizeBtn.Size = UDim2.new(0, 28, 0, 28)
 minimizeBtn.Position = UDim2.new(1, -42, 0.5, -14)
-minimizeBtn.BackgroundColor3 = Color3.fromRGB(15, 50, 32)
+minimizeBtn.BackgroundColor3 = Color3.fromRGB(28, 40, 62)
 minimizeBtn.Text = "−"
-minimizeBtn.TextColor3 = Color3.fromRGB(100, 210, 155)
+minimizeBtn.TextColor3 = Color3.fromRGB(100, 140, 190)
 minimizeBtn.TextSize = 16
 minimizeBtn.Font = Enum.Font.GothamBold
 minimizeBtn.BorderSizePixel = 0
@@ -157,7 +157,7 @@ minCorner.Parent = minimizeBtn
 local divider = Instance.new("Frame")
 divider.Size = UDim2.new(1, -28, 0, 1)
 divider.Position = UDim2.new(0, 14, 0, 58)
-divider.BackgroundColor3 = Color3.fromRGB(50, 160, 100)
+divider.BackgroundColor3 = Color3.fromRGB(58, 90, 138)
 divider.BackgroundTransparency = 0.5
 divider.BorderSizePixel = 0
 divider.Parent = mainFrame
@@ -165,8 +165,8 @@ divider.Parent = mainFrame
 local divGrad = Instance.new("UIGradient")
 divGrad.Color = ColorSequence.new({
 	ColorSequenceKeypoint.new(0, Color3.fromRGB(0,0,0)),
-	ColorSequenceKeypoint.new(0.3, Color3.fromRGB(60,200,130)),
-	ColorSequenceKeypoint.new(0.7, Color3.fromRGB(60,200,130)),
+	ColorSequenceKeypoint.new(0.3, Color3.fromRGB(74,111,165)),
+	ColorSequenceKeypoint.new(0.7, Color3.fromRGB(74,111,165)),
 	ColorSequenceKeypoint.new(1, Color3.fromRGB(0,0,0))
 })
 divGrad.Parent = divider
@@ -197,7 +197,7 @@ local function createToggleButton(name, icon, order)
 	local container = Instance.new("Frame")
 	container.Name = name .. "Container"
 	container.Size = UDim2.new(1, 0, 0, btnHeight)
-	container.BackgroundColor3 = Color3.fromRGB(10, 28, 18)
+	container.BackgroundColor3 = Color3.fromRGB(26, 36, 56)
 	container.BackgroundTransparency = 0.2
 	container.BorderSizePixel = 0
 	container.LayoutOrder = order
@@ -208,15 +208,15 @@ local function createToggleButton(name, icon, order)
 	containerCorner.Parent = container
 
 	local containerStroke = Instance.new("UIStroke")
-	containerStroke.Color = Color3.fromRGB(40, 140, 90)
-	containerStroke.Transparency = 0.6
+	containerStroke.Color = Color3.fromRGB(46, 70, 110)
+	containerStroke.Transparency = 0.5
 	containerStroke.Thickness = 1
 	containerStroke.Parent = container
 
 	local containerGrad = Instance.new("UIGradient")
 	containerGrad.Color = ColorSequence.new({
-		ColorSequenceKeypoint.new(0, Color3.fromRGB(18, 42, 28)),
-		ColorSequenceKeypoint.new(1, Color3.fromRGB(8, 22, 14))
+		ColorSequenceKeypoint.new(0, Color3.fromRGB(32, 44, 68)),
+		ColorSequenceKeypoint.new(1, Color3.fromRGB(20, 28, 46))
 	})
 	containerGrad.Rotation = 135
 	containerGrad.Parent = container
@@ -224,9 +224,9 @@ local function createToggleButton(name, icon, order)
 	local iconLabel = Instance.new("TextLabel")
 	iconLabel.Size = UDim2.new(0, 32, 0, 32)
 	iconLabel.Position = UDim2.new(0, 12, 0.5, -16)
-	iconLabel.BackgroundColor3 = Color3.fromRGB(25, 100, 60)
+	iconLabel.BackgroundColor3 = Color3.fromRGB(30, 56, 96)
 	iconLabel.Text = icon
-	iconLabel.TextColor3 = Color3.fromRGB(120, 220, 165)
+	iconLabel.TextColor3 = Color3.fromRGB(140, 185, 230)
 	iconLabel.TextScaled = true
 	iconLabel.Font = Enum.Font.GothamBold
 	iconLabel.BorderSizePixel = 0
@@ -243,7 +243,7 @@ local function createToggleButton(name, icon, order)
 	nameLabel.Position = UDim2.new(0, 54, 0.5, -14)
 	nameLabel.BackgroundTransparency = 1
 	nameLabel.Text = name
-	nameLabel.TextColor3 = Color3.fromRGB(190, 240, 215)
+	nameLabel.TextColor3 = Color3.fromRGB(195, 215, 240)
 	nameLabel.TextScaled = false
 	nameLabel.TextSize = isMobile and 12 or 13
 	nameLabel.Font = Enum.Font.GothamBold
@@ -257,7 +257,7 @@ local function createToggleButton(name, icon, order)
 	statusLabel.Position = UDim2.new(0, 54, 0.5, 2)
 	statusLabel.BackgroundTransparency = 1
 	statusLabel.Text = "Inactive"
-	statusLabel.TextColor3 = Color3.fromRGB(60, 110, 80)
+	statusLabel.TextColor3 = Color3.fromRGB(70, 100, 140)
 	statusLabel.TextScaled = false
 	statusLabel.TextSize = isMobile and 9 or 10
 	statusLabel.Font = Enum.Font.Gotham
@@ -268,7 +268,7 @@ local function createToggleButton(name, icon, order)
 	local toggleTrack = Instance.new("Frame")
 	toggleTrack.Size = UDim2.new(0, 44, 0, 24)
 	toggleTrack.Position = UDim2.new(1, -56, 0.5, -12)
-	toggleTrack.BackgroundColor3 = Color3.fromRGB(15, 45, 28)
+	toggleTrack.BackgroundColor3 = Color3.fromRGB(20, 32, 52)
 	toggleTrack.BorderSizePixel = 0
 	toggleTrack.ZIndex = 2
 	toggleTrack.Parent = container
@@ -278,7 +278,7 @@ local function createToggleButton(name, icon, order)
 	trackCorner.Parent = toggleTrack
 
 	local trackStroke = Instance.new("UIStroke")
-	trackStroke.Color = Color3.fromRGB(40, 130, 80)
+	trackStroke.Color = Color3.fromRGB(46, 80, 130)
 	trackStroke.Transparency = 0.3
 	trackStroke.Thickness = 1
 	trackStroke.Parent = toggleTrack
@@ -286,7 +286,7 @@ local function createToggleButton(name, icon, order)
 	local toggleKnob = Instance.new("Frame")
 	toggleKnob.Size = UDim2.new(0, 18, 0, 18)
 	toggleKnob.Position = UDim2.new(0, 3, 0.5, -9)
-	toggleKnob.BackgroundColor3 = Color3.fromRGB(80, 180, 120)
+	toggleKnob.BackgroundColor3 = Color3.fromRGB(80, 120, 175)
 	toggleKnob.BorderSizePixel = 0
 	toggleKnob.ZIndex = 3
 	toggleKnob.Parent = toggleTrack
@@ -307,14 +307,14 @@ local function createToggleButton(name, icon, order)
 	local function animateToggle(state)
 		isOn = state
 		local knobPos = state and UDim2.new(1, -21, 0.5, -9) or UDim2.new(0, 3, 0.5, -9)
-		local trackColor = state and Color3.fromRGB(30, 130, 80) or Color3.fromRGB(15, 45, 28)
-		local knobColor = state and Color3.fromRGB(120, 230, 170) or Color3.fromRGB(80, 180, 120)
-		local strokeColor = state and Color3.fromRGB(70, 200, 130) or Color3.fromRGB(40, 130, 80)
-		local containerStrokeColor = state and Color3.fromRGB(60, 200, 130) or Color3.fromRGB(40, 140, 90)
-		local containerStrokeTransp = state and 0.2 or 0.6
+		local trackColor = state and Color3.fromRGB(42, 80, 140) or Color3.fromRGB(20, 32, 52)
+		local knobColor = state and Color3.fromRGB(130, 175, 230) or Color3.fromRGB(80, 120, 175)
+		local strokeColor = state and Color3.fromRGB(90, 140, 210) or Color3.fromRGB(46, 80, 130)
+		local containerStrokeColor = state and Color3.fromRGB(74, 120, 185) or Color3.fromRGB(46, 70, 110)
+		local containerStrokeTransp = state and 0.15 or 0.5
 		local statusText = state and "Active" or "Inactive"
-		local statusColor = state and Color3.fromRGB(100, 210, 155) or Color3.fromRGB(60, 110, 80)
-		local iconBg = state and Color3.fromRGB(35, 130, 80) or Color3.fromRGB(25, 100, 60)
+		local statusColor = state and Color3.fromRGB(110, 160, 215) or Color3.fromRGB(70, 100, 140)
+		local iconBg = state and Color3.fromRGB(42, 74, 127) or Color3.fromRGB(30, 56, 96)
 
 		TweenService:Create(toggleKnob, TweenInfo.new(0.25, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Position = knobPos, BackgroundColor3 = knobColor}):Play()
 		TweenService:Create(toggleTrack, TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = trackColor}):Play()
@@ -335,7 +335,7 @@ local function createToggleButton(name, icon, order)
 			local ripple = Instance.new("Frame")
 			ripple.Size = UDim2.new(0, 0, 0, 0)
 			ripple.Position = UDim2.new(0.5, 0, 0.5, 0)
-			ripple.BackgroundColor3 = Color3.fromRGB(60, 200, 130)
+			ripple.BackgroundColor3 = Color3.fromRGB(74, 120, 190)
 			ripple.BackgroundTransparency = 0.5
 			ripple.BorderSizePixel = 0
 			ripple.ZIndex = 5
@@ -375,7 +375,7 @@ madeByLabel.Size = UDim2.new(1, 0, 0, 16)
 madeByLabel.Position = UDim2.new(0, 0, 0, 4)
 madeByLabel.BackgroundTransparency = 1
 madeByLabel.Text = "Made By @IOA.FAN"
-madeByLabel.TextColor3 = Color3.fromRGB(90, 180, 130)
+madeByLabel.TextColor3 = Color3.fromRGB(90, 130, 180)
 madeByLabel.TextScaled = false
 madeByLabel.TextSize = isMobile and 10 or 11
 madeByLabel.Font = Enum.Font.GothamBold
@@ -386,8 +386,8 @@ local socLabel = Instance.new("TextLabel")
 socLabel.Size = UDim2.new(1, 0, 0, 14)
 socLabel.Position = UDim2.new(0, 0, 0, 22)
 socLabel.BackgroundTransparency = 1
-socLabel.Text = "YT: ItzSantis • TT: ioa.fan"
-socLabel.TextColor3 = Color3.fromRGB(50, 100, 70)
+socLabel.Text = "YT: ZeroScriptsOnTop • TT: nexioontopyt"
+socLabel.TextColor3 = Color3.fromRGB(55, 80, 115)
 socLabel.TextScaled = false
 socLabel.TextSize = isMobile and 9 or 10
 socLabel.Font = Enum.Font.Gotham
@@ -453,8 +453,8 @@ TweenService:Create(mainFrame, TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.Ea
 local shimmerFrame = Instance.new("Frame")
 shimmerFrame.Size = UDim2.new(0, 60, 1, 0)
 shimmerFrame.Position = UDim2.new(-0.3, 0, 0, 0)
-shimmerFrame.BackgroundColor3 = Color3.fromRGB(200, 255, 225)
-shimmerFrame.BackgroundTransparency = 0.92
+shimmerFrame.BackgroundColor3 = Color3.fromRGB(180, 210, 240)
+shimmerFrame.BackgroundTransparency = 0.93
 shimmerFrame.BorderSizePixel = 0
 shimmerFrame.ZIndex = 6
 shimmerFrame.ClipsDescendants = false
@@ -467,7 +467,7 @@ shimCorner.Parent = shimmerFrame
 local shimGrad = Instance.new("UIGradient")
 shimGrad.Color = ColorSequence.new({
 	ColorSequenceKeypoint.new(0, Color3.fromRGB(0,0,0)),
-	ColorSequenceKeypoint.new(0.5, Color3.fromRGB(180,255,220)),
+	ColorSequenceKeypoint.new(0.5, Color3.fromRGB(160, 200, 235)),
 	ColorSequenceKeypoint.new(1, Color3.fromRGB(0,0,0))
 })
 shimGrad.Rotation = 15
