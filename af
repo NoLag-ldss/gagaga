@@ -98,10 +98,11 @@ logoGrad.Parent = logoContainer
 local logoLabel = Instance.new("TextLabel")
 logoLabel.Size = UDim2.new(1, 0, 1, 0)
 logoLabel.BackgroundTransparency = 1
-logoLabel.Text = "N"
+logoLabel.Text = "ioa\nscripz"
 logoLabel.TextColor3 = Color3.fromRGB(200, 220, 245)
 logoLabel.TextScaled = true
-logoLabel.Font = Enum.Font.GothamBold
+logoLabel.Font = Enum.Font.GothamBlack
+logoLabel.TextWrapped = true
 logoLabel.ZIndex = 5
 logoLabel.Parent = logoContainer
 
